@@ -1,0 +1,24 @@
+{
+  "originHash" : "c0a5507dc4cc247a817cdcd131ebf0f4ee8fb3bd134893cc366c613609ee0e01",
+  "pins" : [
+    {
+      "identity" : "fhirmodels",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/FHIRModels",
+      "state" : {
+        "revision" : "ee8b55c245e92389e05b0a56ad2b84d37c1985e5",
+        "version" : "0.6.1"
+      }
+    },
+    {
+      "identity" : "swift-fhir",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/smart-on-fhir/Swift-FHIR",
+      "state" : {
+        "revision" : "b68fb5d6c8137de4a06894e683dc1a726a832907",
+        "version" : "4.2.1"
+      }
+    }
+  ],
+  "version" : 3
+}

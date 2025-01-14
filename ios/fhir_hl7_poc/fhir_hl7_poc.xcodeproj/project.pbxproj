@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BA900182D34E0B300B278BB /* FHIR in Frameworks */ = {isa = PBXBuildFile; productRef = 9BA900172D34E0B300B278BB /* FHIR */; };
+		9BA9001B2D34E39400B278BB /* ModelsR5 in Frameworks */ = {isa = PBXBuildFile; productRef = 9BA9001A2D34E39400B278BB /* ModelsR5 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BA9FFEC2D3044B400B278BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA9FFD12D3044B000B278BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BA9FFD82D3044B000B278BB;
+			remoteInfo = fhir_hl7_poc;
+		};
+		9BA9FFF62D3044B400B278BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA9FFD12D3044B000B278BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BA9FFD82D3044B000B278BB;
+			remoteInfo = fhir_hl7_poc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BA9FFD92D3044B000B278BB /* fhir_hl7_poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fhir_hl7_poc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA9FFEB2D3044B400B278BB /* fhir_hl7_pocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fhir_hl7_pocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA9FFF52D3044B400B278BB /* fhir_hl7_pocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fhir_hl7_pocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9BA9FFDB2D3044B000B278BB /* fhir_hl7_poc */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = fhir_hl7_poc;
+			sourceTree = "<group>";
+		};
+		9BA9FFEE2D3044B400B278BB /* fhir_hl7_pocTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = fhir_hl7_pocTests;
+			sourceTree = "<group>";
+		};
+		9BA9FFF82D3044B400B278BB /* fhir_hl7_pocUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = fhir_hl7_pocUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BA9FFD62D3044B000B278BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA900182D34E0B300B278BB /* FHIR in Frameworks */,
+				9BA9001B2D34E39400B278BB /* ModelsR5 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9FFE82D3044B400B278BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9FFF22D3044B400B278BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BA9FFD02D3044B000B278BB = {
+			isa = PBXGroup;
+			children = (
+				9BA9FFDB2D3044B000B278BB /* fhir_hl7_poc */,
+				9BA9FFEE2D3044B400B278BB /* fhir_hl7_pocTests */,
+				9BA9FFF82D3044B400B278BB /* fhir_hl7_pocUITests */,
+				9BA9FFDA2D3044B000B278BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BA9FFDA2D3044B000B278BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BA9FFD92D3044B000B278BB /* fhir_hl7_poc.app */,
+				9BA9FFEB2D3044B400B278BB /* fhir_hl7_pocTests.xctest */,
+				9BA9FFF52D3044B400B278BB /* fhir_hl7_pocUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BA9FFD82D3044B000B278BB /* fhir_hl7_poc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA9FFFF2D3044B400B278BB /* Build configuration list for PBXNativeTarget "fhir_hl7_poc" */;
+			buildPhases = (
+				9BA9FFD52D3044B000B278BB /* Sources */,
+				9BA9FFD62D3044B000B278BB /* Frameworks */,
+				9BA9FFD72D3044B000B278BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9BA9FFDB2D3044B000B278BB /* fhir_hl7_poc */,
+			);
+			name = fhir_hl7_poc;
+			packageProductDependencies = (
+				9BA900172D34E0B300B278BB /* FHIR */,
+				9BA9001A2D34E39400B278BB /* ModelsR5 */,
+			);
+			productName = fhir_hl7_poc;
+			productReference = 9BA9FFD92D3044B000B278BB /* fhir_hl7_poc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BA9FFEA2D3044B400B278BB /* fhir_hl7_pocTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA900022D3044B400B278BB /* Build configuration list for PBXNativeTarget "fhir_hl7_pocTests" */;
+			buildPhases = (
+				9BA9FFE72D3044B400B278BB /* Sources */,
+				9BA9FFE82D3044B400B278BB /* Frameworks */,
+				9BA9FFE92D3044B400B278BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BA9FFED2D3044B400B278BB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9BA9FFEE2D3044B400B278BB /* fhir_hl7_pocTests */,
+			);
+			name = fhir_hl7_pocTests;
+			packageProductDependencies = (
+			);
+			productName = fhir_hl7_pocTests;
+			productReference = 9BA9FFEB2D3044B400B278BB /* fhir_hl7_pocTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BA9FFF42D3044B400B278BB /* fhir_hl7_pocUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA900052D3044B400B278BB /* Build configuration list for PBXNativeTarget "fhir_hl7_pocUITests" */;
+			buildPhases = (
+				9BA9FFF12D3044B400B278BB /* Sources */,
+				9BA9FFF22D3044B400B278BB /* Frameworks */,
+				9BA9FFF32D3044B400B278BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BA9FFF72D3044B400B278BB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9BA9FFF82D3044B400B278BB /* fhir_hl7_pocUITests */,
+			);
+			name = fhir_hl7_pocUITests;
+			packageProductDependencies = (
+			);
+			productName = fhir_hl7_pocUITests;
+			productReference = 9BA9FFF52D3044B400B278BB /* fhir_hl7_pocUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BA9FFD12D3044B000B278BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					9BA9FFD82D3044B000B278BB = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					9BA9FFEA2D3044B400B278BB = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 9BA9FFD82D3044B000B278BB;
+					};
+					9BA9FFF42D3044B400B278BB = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 9BA9FFD82D3044B000B278BB;
+					};
+				};
+			};
+			buildConfigurationList = 9BA9FFD42D3044B000B278BB /* Build configuration list for PBXProject "fhir_hl7_poc" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BA9FFD02D3044B000B278BB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9BA900162D34E0B300B278BB /* XCRemoteSwiftPackageReference "Swift-FHIR" */,
+				9BA900192D34E39400B278BB /* XCRemoteSwiftPackageReference "FHIRModels" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9BA9FFDA2D3044B000B278BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BA9FFD82D3044B000B278BB /* fhir_hl7_poc */,
+				9BA9FFEA2D3044B400B278BB /* fhir_hl7_pocTests */,
+				9BA9FFF42D3044B400B278BB /* fhir_hl7_pocUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BA9FFD72D3044B000B278BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9FFE92D3044B400B278BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9FFF32D3044B400B278BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BA9FFD52D3044B000B278BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9FFE72D3044B400B278BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9FFF12D3044B400B278BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BA9FFED2D3044B400B278BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BA9FFD82D3044B000B278BB /* fhir_hl7_poc */;
+			targetProxy = 9BA9FFEC2D3044B400B278BB /* PBXContainerItemProxy */;
+		};
+		9BA9FFF72D3044B400B278BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BA9FFD82D3044B000B278BB /* fhir_hl7_poc */;
+			targetProxy = 9BA9FFF62D3044B400B278BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9BA900002D3044B400B278BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"fhir_hl7_poc/Preview Content\"";
+				DEVELOPMENT_TEAM = XRD7HP93PZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used to parse health care related data";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kevinwilson.fhir-hl7-poc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BA900012D3044B400B278BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"fhir_hl7_poc/Preview Content\"";
+				DEVELOPMENT_TEAM = XRD7HP93PZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used to parse health care related data";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kevinwilson.fhir-hl7-poc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BA900032D3044B400B278BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRD7HP93PZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kevinwilson.fhir-hl7-pocTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fhir_hl7_poc.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fhir_hl7_poc";
+			};
+			name = Debug;
+		};
+		9BA900042D3044B400B278BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRD7HP93PZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kevinwilson.fhir-hl7-pocTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fhir_hl7_poc.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fhir_hl7_poc";
+			};
+			name = Release;
+		};
+		9BA900062D3044B400B278BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRD7HP93PZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kevinwilson.fhir-hl7-pocUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fhir_hl7_poc;
+			};
+			name = Debug;
+		};
+		9BA900072D3044B400B278BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRD7HP93PZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kevinwilson.fhir-hl7-pocUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fhir_hl7_poc;
+			};
+			name = Release;
+		};
+		9BA9FFFD2D3044B400B278BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BA9FFFE2D3044B400B278BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BA900022D3044B400B278BB /* Build configuration list for PBXNativeTarget "fhir_hl7_pocTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA900032D3044B400B278BB /* Debug */,
+				9BA900042D3044B400B278BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA900052D3044B400B278BB /* Build configuration list for PBXNativeTarget "fhir_hl7_pocUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA900062D3044B400B278BB /* Debug */,
+				9BA900072D3044B400B278BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA9FFD42D3044B000B278BB /* Build configuration list for PBXProject "fhir_hl7_poc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA9FFFD2D3044B400B278BB /* Debug */,
+				9BA9FFFE2D3044B400B278BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA9FFFF2D3044B400B278BB /* Build configuration list for PBXNativeTarget "fhir_hl7_poc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA900002D3044B400B278BB /* Debug */,
+				9BA900012D3044B400B278BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9BA900162D34E0B300B278BB /* XCRemoteSwiftPackageReference "Swift-FHIR" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smart-on-fhir/Swift-FHIR";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
+		9BA900192D34E39400B278BB /* XCRemoteSwiftPackageReference "FHIRModels" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/FHIRModels";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9BA900172D34E0B300B278BB /* FHIR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BA900162D34E0B300B278BB /* XCRemoteSwiftPackageReference "Swift-FHIR" */;
+			productName = FHIR;
+		};
+		9BA9001A2D34E39400B278BB /* ModelsR5 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BA900192D34E39400B278BB /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsR5;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9BA9FFD12D3044B000B278BB /* Project object */;
+}

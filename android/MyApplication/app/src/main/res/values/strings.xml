@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HL7 POC</string>
+    
+    <!-- Card Titles -->
+    <string name="title_patient_information">Patient Information</string>
+    <string name="title_vital_signs">Vital Signs</string>
+    <string name="title_next_appointment">Next Appointment</string>
+    <string name="title_contact_information">Contact Information</string>
+    
+    <!-- Labels -->
+    <string name="label_name">Name</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_birth_date">Birth Date</string>
+    <string name="label_measured_on">Measured on</string>
+    <string name="label_description">Description</string>
+    <string name="label_date">Date</string>
+    <string name="label_provider">Provider</string>
+    <string name="label_location">Location</string>
+    <string name="label_instructions">Instructions</string>
+    <string name="label_primary_phone">Primary</string>
+    <string name="label_notes">Notes</string>
+    
+    <!-- Messages -->
+    <string name="message_no_vitals">No vital signs available</string>
+    <string name="message_no_appointments">No upcoming appointments</string>
+    <string name="message_retry">Retry</string>
+    
+    <!-- Units -->
+    <string name="unit_heart_rate">%1$d bpm</string>
+</resources>
