@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers.dart';
+import '../services/notification_service.dart';
 import 'checkin_screen.dart';
 import 'dashboard_screen.dart';
 import 'settings_screen.dart';
 import 'timeline_screen.dart';
 
 /// Bottom-nav scaffold: Today / Timeline / Check-in / Settings.
-class HomeShell extends StatefulWidget {
+/// Also owns notification lifecycle: asks permission once, and reschedules
+/// whenever the active attempt or notification prefs change.
+class HomeShell extends ConsumerStatefulWidget {
   const HomeShell({super.key});
 
   @override
-  State<HomeShell> createState() => _HomeShellState();
+  ConsumerState<HomeShell> createState() => _HomeShellState();
 }
 
-class _HomeShellState extends State<HomeShell> {
+class _HomeShellState extends ConsumerState<HomeShell> {
   int _index = 0;
 
   static const _screens = [
@@ -24,7 +29,24 @@ class _HomeShellState extends State<HomeShell> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    NotificationService.instance.requestPermission();
+  }
+
+  void _syncNotifications() {
+    final attempt = ref.read(activeAttemptProvider).valueOrNull;
+    final profile = ref.read(profileProvider).valueOrNull;
+    if (profile != null) {
+      NotificationService.instance.sync(attempt, profile);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    ref.listen(activeAttemptProvider, (_, __) => _syncNotifications());
+    ref.listen(profileProvider, (_, __) => _syncNotifications());
+
     return Scaffold(
       body: _screens[_index],
       bottomNavigationBar: NavigationBar(

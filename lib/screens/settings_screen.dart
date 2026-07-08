@@ -54,6 +54,52 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => _editSavings(context, ref, profile),
             ),
           const Divider(height: 32),
+          if (profile != null) ...[
+            Text('Notifications',
+                style: Theme.of(context).textTheme.titleMedium),
+            SwitchListTile(
+              secondary: const Icon(Icons.emoji_events_outlined),
+              title: const Text('Milestone unlocked alerts'),
+              value: profile.milestoneAlerts,
+              onChanged: (v) => _saveProfile(
+                  ref, profile.copyWith(milestoneAlerts: v)),
+            ),
+            SwitchListTile(
+              secondary: const Icon(Icons.notifications_outlined),
+              title: const Text('Daily check-in reminder'),
+              value: profile.dailyReminder,
+              onChanged: (v) =>
+                  _saveProfile(ref, profile.copyWith(dailyReminder: v)),
+            ),
+            if (profile.dailyReminder)
+              ListTile(
+                leading: const Icon(Icons.schedule),
+                title: const Text('Reminder time'),
+                subtitle: Text(_hourLabel(profile.reminderHour)),
+                trailing: const Icon(Icons.edit_outlined),
+                onTap: () async {
+                  final picked = await showTimePicker(
+                    context: context,
+                    initialTime:
+                        TimeOfDay(hour: profile.reminderHour, minute: 0),
+                  );
+                  if (picked != null) {
+                    await _saveProfile(
+                        ref, profile.copyWith(reminderHour: picked.hour));
+                  }
+                },
+              ),
+            ListTile(
+              leading: const Icon(Icons.favorite_outline),
+              title: const Text('Support contact'),
+              subtitle: Text(profile.supportContactPhone?.isNotEmpty == true
+                  ? '${profile.supportContactName ?? ''} · ${profile.supportContactPhone}'
+                  : 'Someone to call from the SOS screen'),
+              trailing: const Icon(Icons.edit_outlined),
+              onTap: () => _editSupportContact(context, ref, profile),
+            ),
+            const Divider(height: 32),
+          ],
           if (attempt != null)
             ListTile(
               leading: Icon(Icons.refresh,
@@ -99,6 +145,60 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
+  static String _hourLabel(int hour) {
+    final dt = DateTime(2000, 1, 1, hour);
+    return DateFormat.jm().format(dt);
+  }
+
+  Future<void> _saveProfile(WidgetRef ref, UserProfile profile) async {
+    await ref.read(firestoreServiceProvider)?.saveProfile(profile);
+  }
+
+  Future<void> _editSupportContact(
+      BuildContext context, WidgetRef ref, UserProfile profile) async {
+    final name = TextEditingController(text: profile.supportContactName);
+    final phone = TextEditingController(text: profile.supportContactPhone);
+    final saved = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Support contact'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(
+              controller: name,
+              decoration: const InputDecoration(labelText: 'Name'),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: phone,
+              keyboardType: TextInputType.phone,
+              decoration: const InputDecoration(labelText: 'Phone number'),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Cancel')),
+          FilledButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('Save')),
+        ],
+      ),
+    );
+    if (saved == true) {
+      await _saveProfile(
+          ref,
+          profile.copyWith(
+            supportContactName: name.text.trim(),
+            supportContactPhone: phone.text.trim(),
+          ));
+    }
+    name.dispose();
+    phone.dispose();
+  }
+
   Future<void> _editSavings(
       BuildContext context, WidgetRef ref, UserProfile profile) async {
     final spend =
@@ -137,12 +237,11 @@ class SettingsScreen extends ConsumerWidget {
       ),
     );
     if (saved == true) {
-      await ref.read(firestoreServiceProvider)?.saveProfile(UserProfile(
-            uid: profile.uid,
-            displayName: profile.displayName,
+      await _saveProfile(
+          ref,
+          profile.copyWith(
             weeklySpendUsd: int.tryParse(spend.text.trim()) ?? 0,
             drinksPerWeek: int.tryParse(drinks.text.trim()) ?? 0,
-            onboarded: true,
           ));
     }
     spend.dispose();

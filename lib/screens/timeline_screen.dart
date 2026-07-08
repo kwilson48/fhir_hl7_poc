@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
 import '../data/milestones.dart';
+import '../models/milestone.dart';
 import '../providers.dart';
+import '../widgets/share_milestone.dart';
 
 /// The "Benefits" tab: the full recovery timeline. Reached milestones are
-/// unlocked and bright; future ones show when they'll arrive.
+/// unlocked, bright, and shareable; future ones show when they'll arrive.
 class TimelineScreen extends ConsumerWidget {
   const TimelineScreen({super.key});
 
@@ -14,12 +16,13 @@ class TimelineScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final attempt = ref.watch(activeAttemptProvider).valueOrNull;
     final now = DateTime.now();
+    final day = attempt?.daysIn(now) ?? 0;
 
     return SafeArea(
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          Text('Your body on day ${attempt?.daysIn(now) ?? 0}',
+          Text('Your body on day $day',
               style: Theme.of(context).textTheme.headlineSmall),
           const SizedBox(height: 4),
           Text(
@@ -31,10 +34,8 @@ class TimelineScreen extends ConsumerWidget {
           const SizedBox(height: 16),
           for (final m in kMilestones)
             _TimelineEntry(
-              emoji: m.emoji,
-              title: m.title,
-              body: m.body,
-              sourceNote: m.sourceNote,
+              milestone: m,
+              day: day,
               reached:
                   attempt != null && m.isReached(attempt.startDate, now),
               subtitle: attempt == null
@@ -54,18 +55,14 @@ class TimelineScreen extends ConsumerWidget {
 
 class _TimelineEntry extends StatelessWidget {
   const _TimelineEntry({
-    required this.emoji,
-    required this.title,
-    required this.body,
+    required this.milestone,
+    required this.day,
     required this.reached,
     required this.subtitle,
-    this.sourceNote,
   });
 
-  final String emoji;
-  final String title;
-  final String body;
-  final String? sourceNote;
+  final Milestone milestone;
+  final int day;
   final bool reached;
   final String subtitle;
 
@@ -82,14 +79,14 @@ class _TimelineEntry extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(reached ? emoji : '🔒',
+              Text(reached ? milestone.emoji : '🔒',
                   style: const TextStyle(fontSize: 28)),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title,
+                    Text(milestone.title,
                         style: Theme.of(context).textTheme.titleMedium),
                     Text(subtitle,
                         style: Theme.of(context)
@@ -97,10 +94,10 @@ class _TimelineEntry extends StatelessWidget {
                             .labelSmall
                             ?.copyWith(color: scheme.primary)),
                     const SizedBox(height: 6),
-                    Text(body),
-                    if (sourceNote != null) ...[
+                    Text(milestone.body),
+                    if (milestone.sourceNote != null) ...[
                       const SizedBox(height: 6),
-                      Text(sourceNote!,
+                      Text(milestone.sourceNote!,
                           style: Theme.of(context)
                               .textTheme
                               .bodySmall
@@ -109,6 +106,16 @@ class _TimelineEntry extends StatelessWidget {
                   ],
                 ),
               ),
+              if (reached)
+                IconButton(
+                  icon: const Icon(Icons.ios_share),
+                  tooltip: 'Share this milestone',
+                  onPressed: () => shareMilestone(
+                    context: context,
+                    milestone: milestone,
+                    day: day,
+                  ),
+                ),
             ],
           ),
         ),

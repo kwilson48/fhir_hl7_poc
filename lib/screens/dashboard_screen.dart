@@ -6,6 +6,7 @@ import '../data/quotes.dart';
 import '../models/milestone.dart';
 import '../providers.dart';
 import '../widgets/progress_ring.dart';
+import 'sos_screen.dart';
 
 /// The "Today" tab: day counter, quote of the day, latest & next milestone,
 /// and savings stats.
@@ -32,7 +33,18 @@ class DashboardScreen extends ConsumerWidget {
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          const SizedBox(height: 8),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton.icon(
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const SosScreen())),
+              icon: Icon(Icons.waves,
+                  color: Theme.of(context).colorScheme.error),
+              label: Text('Craving? Tap here',
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.error)),
+            ),
+          ),
           Center(
             child: ProgressRing(
               progress: attempt.progress(now),

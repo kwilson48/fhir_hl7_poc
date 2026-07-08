@@ -8,6 +8,9 @@ A cross-platform (iOS / Android / web) Flutter app for a **30-day alcohol-free c
 - **Daily check-in** — mood, craving intensity, and an optional note, one per day
 - **Savings stats** — money saved, calories and drinks skipped, based on your typical week
 - **Compassionate resets** — a slip closes the attempt into history and starts a fresh 30 days; lifetime alcohol-free days never go down
+- **Local notifications** — a ping when a milestone unlocks, plus a daily check-in reminder at a time you pick
+- **Craving SOS** — guided box-breathing, urge-surfing tips, and one-tap call/text to your support person
+- **Shareable milestone cards** — share any unlocked milestone as an image
 - **Sign in with Google, Apple, phone (SMS), or email/password**
 
 > Dry30 shares general wellness information, not medical advice. Heavy daily drinkers should talk to a doctor before stopping abruptly — withdrawal can be dangerous.
@@ -94,8 +97,6 @@ flutter analyze
 
 ## Roadmap ideas
 
-- Local notifications: milestone unlocked, evening check-in reminder
 - Widgets/watch complications with the day counter
-- Shareable milestone cards
-- Cloud Functions + FCM for streak-risk nudges
-- Craving SOS screen: breathing timer + "call a friend" shortcuts
+- Cloud Functions + FCM for streak-risk nudges (server-side push)
+- Buddy mode: share your streak with an accountability partner
