@@ -33,8 +33,12 @@ class FirestoreService {
 
   // ---- Attempts ----
 
+  // Ordered so that if stray duplicate active attempts ever exist (offline
+  // writes, historical data), the most recently started one wins
+  // deterministically. Needs the composite index in firestore.indexes.json.
   Stream<SoberAttempt?> watchActiveAttempt() => _attempts
       .where('endedAt', isNull: true)
+      .orderBy('startDate', descending: true)
       .limit(1)
       .snapshots()
       .map((snap) =>
